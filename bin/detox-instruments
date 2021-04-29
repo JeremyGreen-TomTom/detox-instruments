@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#
+# (C) TomTom International B.V. 2021
+
+require 'pathname'
+
+gemDir = Pathname.new(__FILE__).dirname.join("..")
+appDir = gemDir.join("Detox Instruments.app")
+success = system("open", "-a", appDir.to_s)
+raise $? if !success
+
