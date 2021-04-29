@@ -6,6 +6,11 @@ require 'pathname'
 
 gemDir = Pathname.new(__FILE__).dirname.join("..")
 appDir = gemDir.join("Detox Instruments.app")
-success = system("open", "-a", appDir.to_s)
-raise $? if !success
+
+if ARGV.size == 1 && ARGV.first == "--path"
+  puts appDir.realpath
+else
+  success = system("open", "-a", appDir.to_s)
+  raise $? if !success
+end
 
