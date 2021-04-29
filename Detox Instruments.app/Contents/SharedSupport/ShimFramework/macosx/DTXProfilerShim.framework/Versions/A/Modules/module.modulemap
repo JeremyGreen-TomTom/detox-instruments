@@ -1,0 +1,6 @@
+framework module DTXProfilerShim {
+  umbrella header "DTXProfilerShim.h"
+
+  export *
+  module * { export * }
+}

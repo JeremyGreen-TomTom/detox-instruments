@@ -1,0 +1,6 @@
+framework module DTXProfiler {
+  umbrella header "DTXProfiler.h"
+
+  export *
+  module * { export * }
+}
